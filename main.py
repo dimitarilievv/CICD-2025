@@ -8,6 +8,7 @@ class Task(BaseModel):
     id: int
     title: str
     completed: bool = False
+    last_modified: str = datetime.now().isoformat()  # Додавање timestamp
 
 tasks: List[Task] = []
 
